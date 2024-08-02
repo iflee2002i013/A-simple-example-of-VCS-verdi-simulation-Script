@@ -11,6 +11,20 @@
 
 ## vcs仿真并生成fsdb文件
 在终端中输入`make com`即可开始仿真，仿真配置如下：
+# To compile fsdbfile.
+vcs   :
+	vcs     \
+		-full64 -sverilog\
+		+v2k\
+		-l compile.log\
+		-timescale=1ns/1ns\
+		-f filelist.f  \
+		-debug_access+all -kdb +vcs+fsdbon\
+		+define+MP_FSDB\
+
+#-------------------------------------------------------------------------------------------------------
+# This intruction can generate fsdbfile without adding dumpfsdb in your testbench.
+sim   : 
 
 ## 打开verdi并自动添加fsdb文件和.v文件到程序中
 在终端中输入`make verdi`即可调出verdi GUI界面。
