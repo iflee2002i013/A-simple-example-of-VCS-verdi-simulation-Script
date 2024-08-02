@@ -20,7 +20,7 @@
 
 ---
 
-A Simple Example of VCS-Verdi Simulation
+# A Simple Example of VCS-Verdi Simulation
 
 This is a VCS-Verdi Verilog co-simulation script. The primary purpose of creating this library is to enable quick simulation setup without the need to repeatedly write script files and modify relevant paths.
 
