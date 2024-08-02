@@ -17,3 +17,25 @@
 
 ## 清空工作环境
 在终端中输入`make clean`即可清空工作环境中的除`filelist.f` `rtl` `Makefile`以外的文件和文件夹。
+
+---
+
+A Simple Example of VCS-Verdi Simulation
+
+This is a VCS-Verdi Verilog co-simulation script. The primary purpose of creating this library is to enable quick simulation setup without the need to repeatedly write script files and modify relevant paths.
+
+Therefore, the goal of this script is to provide an instantly usable simulation script. You can start a simple VCS-Verdi simulation without making any modifications to the script content or file paths.
+
+Here are the features supported in this environment:
+
+**Support for RTL File Path Import**
+- By entering `make sch` in the terminal, all files ending with .v in the rtl folder are appended to the filelist.f file. Use `make csch` to delete the filelist.f file.
+
+**VCS Simulation and FSDB File Generation**
+- By entering `make com` in the terminal, the simulation will start with the following configuration:
+
+**Open Verdi and Automatically Add FSDB and .v Files to the Program**
+- By entering `make verdi` in the terminal, the Verdi GUI interface will launch.
+
+**Clean the Working Environment**
+- By entering `make clean` in the terminal, all files and folders in the working environment except filelist.f, rtl, and Makefile will be cleared.
