@@ -1,2 +1,2 @@
-./rtl/Seq_Rec_3_1s_Mealy.v
 ./rtl/tb.v
+./rtl/counter_4bit.v
