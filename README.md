@@ -44,14 +44,30 @@ Therefore, the goal of this script is to provide an instantly usable simulation 
 
 Here are the features supported in this environment:
 
-**Support for RTL File Path Import**
+## Support for RTL File Path Import
 - By entering `make sch` in the terminal, all files ending with .v in the rtl folder are appended to the filelist.f file. Use `make csch` to delete the filelist.f file.
 
-**VCS Simulation and FSDB File Generation**
+## VCS Simulation and FSDB File Generation
 - By entering `make com` in the terminal, the simulation will start with the following configuration:
+``` makefile
+# To compile fsdbfile.
+vcs   :
+	vcs     \
+		-full64 -sverilog\
+		+v2k\
+		-l compile.log\
+		-timescale=1ns/1ns\
+		-f filelist.f  \
+		-debug_access+all -kdb +vcs+fsdbon\
+		+define+MP_FSDB\
 
-**Open Verdi and Automatically Add FSDB and .v Files to the Program**
+#-------------------------------------------------------------------------------------------------------
+# This intruction can generate fsdbfile without adding dumpfsdb in your testbench.
+sim   :
+		./simv -l sim.log +fsdbfile+tb.fsdb &
+```
+## Open Verdi and Automatically Add FSDB and .v Files to the Program
 - By entering `make verdi` in the terminal, the Verdi GUI interface will launch.
 
-**Clean the Working Environment**
+## Clean the Working Environment
 - By entering `make clean` in the terminal, all files and folders in the working environment except filelist.f, rtl, and Makefile will be cleared.
