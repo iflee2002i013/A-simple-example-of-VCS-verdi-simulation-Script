@@ -47,6 +47,9 @@ This is a VCS-Verdi Verilog co-simulation script. The primary purpose of creatin
 Therefore, the goal of this script is to provide an instantly usable simulation script. You can start a simple VCS-Verdi simulation without making any modifications to the script content or file paths.
 
 Here are the features supported in this environment:
+## Quick Start Simulation
+- Enter `make all` in the terminal to quickly compile, simulate, and open the Verdi GUI.
+- Enter `make clc` in the terminal to quickly clear the workspace.
 
 ## Support for RTL File Path Import
 - By entering `make sch` in the terminal, all files ending with .v in the rtl folder are appended to the filelist.f file. Use `make csch` to delete the filelist.f file.
