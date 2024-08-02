@@ -6,8 +6,9 @@
 
 现在我来介绍一下在这个环境中支持的功能：
 ## 快速开始仿真
-在终端中输入`make all`将快速执行编译仿真并打开Verdi GUI。
-在终端中输入`make clc`将快速清空工作空间。
+在终端中输入`make all`将快速执行编译仿真并打开Verdi GUI。在终端中输入`make clc`将快速清空工作空间。
+在执行一次`make all`并编译通过后，如果你修改了rtl代码中的内容，可以执行`make com`重新编译，而不需要输入`make all`。
+
 
 ## 支持RTL文件路径导入
 在终端中输入`make sch`即可将rtl文件夹内的所有以`.v`结尾的文件路径追加到`filelist.f`文件中。
@@ -50,6 +51,7 @@ Here are the features supported in this environment:
 ## Quick Start Simulation
 - Enter `make all` in the terminal to quickly compile, simulate, and open the Verdi GUI.
 - Enter `make clc` in the terminal to quickly clear the workspace.
+After executing `make all` and successfully compiling, if you make any changes to the RTL code, you can recompile by executing `make com` instead of running `make all` again.
 
 ## Support for RTL File Path Import
 - By entering `make sch` in the terminal, all files ending with .v in the rtl folder are appended to the filelist.f file. Use `make csch` to delete the filelist.f file.
