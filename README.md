@@ -51,7 +51,7 @@ Here are the features supported in this environment:
 ## Quick Start Simulation
 - Enter `make all` in the terminal to quickly compile, simulate, and open the Verdi GUI.
 - Enter `make clc` in the terminal to quickly clear the workspace.
-After executing `make all` and successfully compiling, if you make any changes to the RTL code, you can recompile by executing `make com` instead of running `make all` again.
+- After executing `make all` and successfully compiling, if you make any changes to the RTL code, you can recompile by executing `make com` instead of running `make all` again.
 
 ## Support for RTL File Path Import
 - By entering `make sch` in the terminal, all files ending with .v in the rtl folder are appended to the filelist.f file. Use `make csch` to delete the filelist.f file.
